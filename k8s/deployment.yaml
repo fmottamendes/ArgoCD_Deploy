@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: k8s-tools-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: k8s_tools
+  template:
+    metadata:
+      labels:
+        app: k8s_tools
+    spec:
+      containers:
+      - name: k8s-tools-container
+        image: alpine:latest
+        command: ["/bin/sleep","600"]
+        ports:
+        - containerPort: 8080
