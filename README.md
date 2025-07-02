@@ -14,3 +14,4 @@
 - Port Forward da porta 8443(localhost) para o service argocd porta 443
 
   ```kubectl port-forward -n argocd service/argocd-server 8443:443```
+
